@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "better-netherite",
+	"version": "${version}",
+	"name": "Better Netherite",
+	"description": "Improves the experience of finding and using netherite.",
+
+	"authors": [
+		"RedstoneWizard08"
+	],
+
+	"contact": {
+		"sources": "https://github.com/RedstoneWizard08/better-netherite"
+	},
+
+	"license": "MIT",
+	"icon": "assets/betternetherite/icon.png",
+	"environment": "*",
+
+	"entrypoints": {
+		"main": [
+			"redstonedev.betternetherite.ExampleMod"
+		],
+
+		"client": [
+			"redstonedev.betternetherite.ExampleModClient"
+		]
+	},
+
+	"mixins": [
+		"betternetherite.mixins.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.14.14",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+
+	"suggests": {
+		"another-mod": "*"
+	}
+}

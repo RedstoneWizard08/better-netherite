@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[44,)"
+license="All rights reserved"
+
+[[mods]]
+modId="betternetherite"
+version="${file.jarVersion}"
+displayName="Better Netherite"
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+displayURL="https://github.com/RedstoneWizard08/better-netherite"
+logoFile="betternetherite.png"
+credits="@Mogswamp on YouTube for giving me the idea lol"
+authors="RedstoneWizard08"
+
+description='''
+Improves the experience for gathering and using netherite by
+making it harder to get and a little more powerful when you
+finally do.
+'''
+
+[[dependencies.betternetherite]]
+    modId="forge"
+    mandatory=true
+    versionRange="[44,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.betternetherite]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.3,1.20)"
+    ordering="NONE"
+    side="BOTH"

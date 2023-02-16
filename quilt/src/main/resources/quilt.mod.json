@@ -1,0 +1,50 @@
+{
+	"schema_version": 1,
+
+    "quilt_loader": {
+		"group": "redstonedev.betternetherite",
+		"id": "betternetherite",
+		"version": "${version}",
+
+		"metadata": {
+			"name": "Better Netherite",
+			"description": "Improves the experience of finding and using netherite.",
+
+            "contributors": {
+				"RedstoneWizard08": "Owner"
+			},
+
+            "contact": {
+				"issues": "https://github.com/RedstoneWizard08/better-netherite/issues",
+				"sources": "https://github.com/RedstoneWizard08/better-netherite"
+			},
+
+            "icon": "assets/betternetherite/icon.png"
+        },
+
+        "intermediate_mappings": "net.fabricmc:intermediary",
+
+        "entrypoints": {
+			"init": "redstonedev.betternetherite.BetterNetheriteQuilt"
+		},
+
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.6-"
+			},
+
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=5.0.0-"
+			},
+
+            {
+				"id": "minecraft",
+				"versions": ">=1.19.3"
+			}
+		]
+	},
+
+    "mixin": "betternetherite.mixins.json"
+}
