@@ -17,8 +17,10 @@ jobs:
           java-version: 17
           distribution: "microsoft"
       
-      - name: Make the gradle wrapper executable
-        run: chmod +x ./gradlew
+      - name: Make the scripts executable
+        run: |
+          chmod +x ./gradlew
+          chmod +x ./postbuild.sh
         
       - name: Build projects
         uses: burrunan/gradle-cache-action@v1
@@ -26,12 +28,12 @@ jobs:
           job-id: build-mods-jdk17
           arguments: build
           gradle-version: wrapper
+      
+      - name: Move jars
+        run: ./postbuild.sh
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
-          path: |
-            fabric/build/libs/*
-            quilt/build/libs/*
-            forge/build/libs/*
+          path: build/libs/*

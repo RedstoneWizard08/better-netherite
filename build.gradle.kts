@@ -13,7 +13,7 @@ subprojects {
     group = property("maven_group")!! as String
 
 	val archivesBaseName = property("archives_base_name")!! as String
-	val minecraftVersion = property("mod_version")!! as String
+	val minecraftVersion = property("minecraft_version")!! as String
 
 	tasks.jar {
 		archiveBaseName.set(archivesBaseName)
