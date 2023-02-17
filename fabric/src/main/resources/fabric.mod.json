@@ -19,11 +19,11 @@
 
 	"entrypoints": {
 		"main": [
-			"redstonedev.betternetherite.ExampleMod"
+			"redstonedev.betternetherite.BetterNetheriteFabric"
 		],
 
 		"client": [
-			"redstonedev.betternetherite.ExampleModClient"
+			"redstonedev.betternetherite.BetterNetheriteFabricClient"
 		]
 	},
 

@@ -2,12 +2,14 @@ plugins {
     id("java")
 	id("eclipse")
     id("maven-publish")
+	id("com.modrinth.minotaur") version "2.+"
 }
 
 subprojects {
     apply(plugin = "java")
 	apply(plugin = "eclipse")
     apply(plugin = "maven-publish")
+	apply(plugin = "com.modrinth.minotaur")
 
     version = property("mod_version")!! as String
     group = property("maven_group")!! as String

@@ -27,6 +27,8 @@ pluginManagement {
 
 rootProject.name = "better-netherite"
 
-include("forge")
 include("fabric")
-include("quilt")
+
+// Need to wait for updates:
+// include("forge")
+// include("quilt")
