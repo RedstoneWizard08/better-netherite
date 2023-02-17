@@ -28,6 +28,8 @@ jobs:
           job-id: build-mods-jdk17
           arguments: fabric:build
           gradle-version: wrapper
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
       
       - name: Move jars
         run: ./postbuild.sh
