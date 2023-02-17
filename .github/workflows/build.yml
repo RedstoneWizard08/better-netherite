@@ -26,7 +26,7 @@ jobs:
         uses: burrunan/gradle-cache-action@v1
         with:
           job-id: build-mods-jdk17
-          arguments: build
+          arguments: fabric:build
           gradle-version: wrapper
       
       - name: Move jars
