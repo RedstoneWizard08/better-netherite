@@ -1,0 +1,28 @@
+name: publish
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: "microsoft"
+      
+      - name: Make the scripts executable
+        run: |
+          chmod +x ./gradlew
+          chmod +x ./postbuild.sh
+        
+      - name: Build & publish projects
+        run: MODRINTH_TOKEN="$MODRINTH_TOKEN" ./gradlew fabric:modrinth
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
