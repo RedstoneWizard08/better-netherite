@@ -20,17 +20,19 @@ FORGE_JAR="forge/build/libs/$archives_base_name-v$mod_version+mc$minecraft_versi
 
 [[ ! -d "build/libs" ]] && mkdir -p "build/libs"
 
-[[ -f "$QUILT_JAR" ]] && cp -f "$QUILT_JAR" \
-    "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-quilt.jar"
-
-[[ -f "$QUILT_SOURCES_JAR" ]] && cp -f "$QUILT_SOURCES_JAR" \
-    "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-quilt-sources.jar"
-
 [[ -f "$FABRIC_JAR" ]] && cp -f "$FABRIC_JAR" \
     "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-fabric.jar"
 
 [[ -f "$FABRIC_SOURCES_JAR" ]] && cp -f "$FABRIC_SOURCES_JAR" \
     "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-fabric-sources.jar"
 
+[[ -f "$QUILT_JAR" ]] && cp -f "$QUILT_JAR" \
+    "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-quilt.jar"
+
+[[ -f "$QUILT_SOURCES_JAR" ]] && cp -f "$QUILT_SOURCES_JAR" \
+    "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-quilt-sources.jar"
+
 [[ -f "$FORGE_JAR" ]] && cp -f "$FORGE_JAR" \
     "build/libs/$archives_base_name-v$mod_version+mc$minecraft_version-forge.jar"
+
+echo "Moved jars!"
